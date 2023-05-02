@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/house_tile.obj-9e50e8f529bd34e9395fb63c524f4bed.mesh"
+
+[deps]
+
+files=[ "res://.import/house_tile.obj-9e50e8f529bd34e9395fb63c524f4bed.mesh" ]
+
+source_file="res://assets/house_tile.obj"
+dest_files=[ "res://.import/house_tile.obj-9e50e8f529bd34e9395fb63c524f4bed.mesh", "res://.import/house_tile.obj-9e50e8f529bd34e9395fb63c524f4bed.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
