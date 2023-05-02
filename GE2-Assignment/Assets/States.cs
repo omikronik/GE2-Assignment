@@ -56,6 +56,43 @@ class GoToBaseState : State
         base.Think();
     }
 }
+
+class AttackState : State
+{
+    public override void Enter()
+    {
+        base.Enter();
+    }
+
+    public override void Exit()
+    { 
+        base.Exit();
+    }
+
+    public override void Think()
+    {
+        base.Think();
+    }
+}
+
+class NearestPursue : State
+{
+    public override void Enter()
+    {
+        base.Enter();
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+    }
+
+    public override void Think()
+    {
+        base.Think();
+    }
+}
+
 class Alive : State
 {
     public override void Enter()
