@@ -111,8 +111,8 @@ public class Boid : MonoBehaviour
         {
             Vector3 tempUp = Vector3.Lerp(transform.up, Vector3.up + (acceleration * banking), Time.deltaTime * 3.0f);
             transform.LookAt(transform.position + velocity, tempUp);
-
-            transform.position += velocity * Time.deltaTime;
+            
+            transform.position += new Vector3(velocity.x, 0, velocity.z) * Time.deltaTime;
             velocity *= (1.0f - (damping * Time.deltaTime));
         }
     }

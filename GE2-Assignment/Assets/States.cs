@@ -2,17 +2,75 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class States : MonoBehaviour
+
+// State for looking for berries
+class ScavengeState : State
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Enter()
     {
-        
+        owner.GetComponent<JitterWander>().enabled = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Exit()
+    { 
+        base.Exit();
+    }
+
+    public override void Think()
     {
-        
+        base.Think();
     }
 }
+class GoToBerryState : State
+{
+    public override void Enter()
+    {
+        owner.GetComponent<JitterWander>().enabled = false;
+    }
+
+    public override void Exit()
+    { 
+        owner.GetComponent<JitterWander>().enabled = false;
+    }
+
+    public override void Think()
+    {
+        base.Think();
+    }
+}
+
+class GoToBaseState : State
+{
+    public override void Enter()
+    {
+        base.Enter();
+    }
+
+    public override void Exit()
+    { 
+        base.Exit();
+    }
+
+    public override void Think()
+    {
+        base.Think();
+    }
+}
+class Alive : State
+{
+    public override void Enter()
+    {
+        base.Enter();
+    }
+
+    public override void Exit()
+    { 
+        base.Exit();
+    }
+
+    public override void Think()
+    {
+        base.Think();
+    }
+}
+
