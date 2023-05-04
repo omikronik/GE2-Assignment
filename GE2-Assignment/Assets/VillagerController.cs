@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VillagerController : MonoBehaviour
 {
+    public GameObject VillagePointRef;
     float collectionTimer = 3.0f;
     public bool hasBerry = false;
 
@@ -25,12 +26,13 @@ public class VillagerController : MonoBehaviour
         if (other.tag == "berry_bush")
         {
             Debug.Log("collided berry");
-            GetComponent<StateMachine>().ChangeState(new GoToBerryState());
+            GetComponent<StateMachine>().ChangeState(new GoToBerryState(other.gameObject));
         }
     }
 
-    IEnumerator CollectionTimer()
+    public IEnumerator CollectionTimer()
     {
+        Debug.Log("In coroutine");
         yield return new WaitForSeconds(collectionTimer);
         GetComponent<StateMachine>().ChangeState(new GoToBaseState());
     }
@@ -45,7 +47,7 @@ public class VillagerController : MonoBehaviour
     {
         GetComponent<StateMachine>().ChangeState(new ScavengeState());
         GetComponent<StateMachine>().SetGlobalState(new Alive());
-
+        
         Debug.Log("hello");
 
     }
