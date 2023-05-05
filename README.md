@@ -69,9 +69,28 @@ The villagers rely on Finite State Machines to manage what they are doing at any
 | State | own |
 | Boid | GE module, modified by me|
 | SteeringBehaviour | GE module |
-| JitterWander | GE module |
-| ObstacleAvoidance | GE module |
+| JitterWander | GE module modified by me|
+| ObstacleAvoidance | GE module modified by me|
+| Arrive | GE module modified by me|
 |VillagerController| own |
 |BerryController| own |
+| ArrowController | own|
+|StateMachine | GE module, modified by me|
+|VillageCenter | own|
 
-I think this was an interesting module, certainly was fun. It feels good to have visual feedback of all the implemented systems working in tandem.
+
+# Of relating to concepts and stuff
+
+The universe, when the brief was made, the obvious choice for boids and nature was unerwater schools of fish or birds,
+I wanted to do something a little more exploratory of the concept, nature as in human nature, survival instincts was
+the inspiraiton, so I decided to make a little simulation of a tribal society.
+
+Mathematics. This part was somewhat possible in godot, but kinda difficult in unity. I could use a gridmap in Godot,
+in tandem with Wave Function Collapse to generate a randomised tilemap. Unity does not support 3d tilemaps in any
+decent capacity (there is a gameobject painter but you cant code with it), and generating 10k 1x1 unit tiles as individual gameobjects makes it unplayable. I could not find a
+solution for this.
+
+
+I think this was an interesting module, certainly was fun. It feels good to have visual feedback of all the implemented systems working in tandem as scuffed as they may be.
+
+
