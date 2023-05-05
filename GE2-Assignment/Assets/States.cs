@@ -55,7 +55,7 @@ class GoToBaseState : State
 {
     public override void Enter()
     {
-        base.Enter();
+        owner.GetComponent<Arrive>().enabled= true;
     }
 
     public override void Exit()

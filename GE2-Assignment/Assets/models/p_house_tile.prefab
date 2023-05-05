@@ -95,6 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6613350639107848134}
   - component: {fileID: 3178657108921410453}
+  - component: {fileID: 95081843603543780}
   m_Layer: 0
   m_Name: p_house_tile
   m_TagString: Untagged
@@ -137,5 +138,22 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.5647807
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &95081843603543780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5804163495801941372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503d9021272aaef45b49f2f3be4c8b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hue: 0.1
+  villageTag: 
+  initialVillagerCount: 5
+  VillagerPrefab: {fileID: 8165841553029706357, guid: 37034b42245de34409d0b0eb36bf4f7f, type: 3}
+  villagerTracker: []

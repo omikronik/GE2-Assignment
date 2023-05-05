@@ -15,7 +15,7 @@ public class VillageCenterController : MonoBehaviour
 
     public void generateVillager()
     {
-        var spawnpos = Random.insideUnitSphere;
+        var spawnpos = (Random.insideUnitSphere + transform.position);
         GameObject npc = Instantiate(VillagerPrefab, new Vector3(spawnpos.x, 0, spawnpos.z), transform.rotation);
         npc.GetComponent<VillagerController>().VillagePointRef = gameObject;
         npc.tag = villageTag;

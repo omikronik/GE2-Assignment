@@ -163,7 +163,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
   damping: 0.01
-  banking: 0.1
+  banking: 0
   maxSpeed: 5
   maxForce: 10
 --- !u!114 &1337802852
