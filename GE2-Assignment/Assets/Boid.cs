@@ -86,7 +86,7 @@ public class Boid : MonoBehaviour
                 float f = force.magnitude;
                 if (f > maxForce)
                 {
-                    force = Vector3.ClampMagnitude(force, maxForce);
+                    force = Vector3.ClampMagnitude(new Vector3(force.x, 0, force.z), maxForce);
                     break;
                 }
             }

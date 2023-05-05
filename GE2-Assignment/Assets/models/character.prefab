@@ -96,9 +96,6 @@ PrefabInstance:
       addedObject: {fileID: 1337802850}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26b92126fdfe8a648b42cd1952ad835b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1337802849}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26b92126fdfe8a648b42cd1952ad835b, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1337802854}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26b92126fdfe8a648b42cd1952ad835b, type: 3}
       insertIndex: -1
@@ -106,6 +103,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26b92126fdfe8a648b42cd1952ad835b, type: 3}
       insertIndex: -1
       addedObject: {fileID: -548764901163247744}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 26b92126fdfe8a648b42cd1952ad835b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5401903977821183752}
   m_SourcePrefab: {fileID: 100100000, guid: 26b92126fdfe8a648b42cd1952ad835b, type: 3}
 --- !u!1 &8165841553029706357 stripped
 GameObject:
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fad2fa5838864459be886e65318a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 3
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   scale: 4
@@ -229,27 +229,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0dcbffef29d19d409d1cc1c55f8a8d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 1
+  weight: 10
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
   slowingDistance: 5
   decelleration: 10
   targetGameObject: {fileID: 0}
---- !u!114 &1337802849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8165841553029706357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a107adb3265aa4e9508d4d90dfabe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VillagePointRef: {fileID: 0}
-  hasBerry: 0
 --- !u!65 &1337802854
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -307,3 +293,18 @@ RotationConstraint:
   m_Active: 1
   m_IsLocked: 1
   m_Sources: []
+--- !u!114 &-5401903977821183752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8165841553029706357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a107adb3265aa4e9508d4d90dfabe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VillagePointRef: {fileID: 0}
+  ArrowPrefab: {fileID: 8767391019291044669, guid: ccf16047ce980b94993773258e8980db, type: 3}
+  hasBerry: 0

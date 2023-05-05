@@ -5,9 +5,10 @@ using UnityEngine;
 public class VillagerController : MonoBehaviour
 {
     public GameObject VillagePointRef;
+    public GameObject ArrowPrefab;
     float collectionTimer = 3.0f;
     public bool hasBerry = false;
-
+    
     void OnDrawGizmos()
     {
         BoxCollider collider = GetComponent<BoxCollider>();
@@ -66,6 +67,6 @@ public class VillagerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //transform.LookAt(Vector3.forward);
     }
 }

@@ -70,7 +70,7 @@ public class ObstacleAvoidance : SteeringBehaviour
             }
         }
         lerpedForce = Vector3.Lerp(lerpedForce,force, Time.deltaTime);
-        return lerpedForce;
+        return new Vector3(lerpedForce.x, 0, lerpedForce.z);
     }
 
     void UpdateFeeler(int feelerNum, Quaternion localRotation, float baseDepth, FeelerInfo.FeeelerType feelerType)
@@ -83,6 +83,16 @@ public class ObstacleAvoidance : SteeringBehaviour
         Vector3 feelerEnd = collided ? info.point : (transform.position + direction * depth);
         feelers[feelerNum] = new FeelerInfo(feelerEnd, info.normal
             , collided, feelerType);
+        /*
+        if (this.gameObject.tag == "Village1" && (info.collider != null && info.collider.gameObject.tag == "Village2"))
+        {
+                
+        }
+        else if (this.gameObject.tag == "Village2" && (info.collider != null && info.collider.gameObject.tag == "Village1"))
+        {
+
+        }
+        */
     }
 
     System.Collections.IEnumerator UpdateFrontFeelers()

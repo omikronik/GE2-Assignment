@@ -8,6 +8,7 @@ TagManager:
   - VillageCenter
   - Village1
   - Village2
+  - arrow
   layers:
   - Default
   - TransparentFX
