@@ -53,14 +53,21 @@ class GoToBerryState : State
 
 class GoToBaseState : State
 {
+    public GameObject baseRef;
+    public GoToBaseState(GameObject baseRef)
+    {
+        this.baseRef = baseRef;
+    }
+
     public override void Enter()
     {
-        owner.GetComponent<Arrive>().enabled= true;
+        owner.GetComponent<Arrive>().enabled = true;
+        owner.GetComponent<Arrive>().targetGameObject = baseRef;
     }
 
     public override void Exit()
     { 
-        base.Exit();
+        owner.GetComponent<Arrive>().targetGameObject = null;
     }
 
     public override void Think()

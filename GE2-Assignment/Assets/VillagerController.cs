@@ -22,19 +22,30 @@ public class VillagerController : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collided berry");
-        if (other.tag == "berry_bush")
+        if (other.tag == "berry_bush" && hasBerry == false)
         {
-            Debug.Log("collided berry");
             GetComponent<StateMachine>().ChangeState(new GoToBerryState(other.gameObject));
+        }
+
+        if (other.tag == VillagePointRef.tag && hasBerry == true)
+        {
+
+            GetComponent<StateMachine>().ChangeState(new ScavengeState());
         }
     }
 
     public IEnumerator CollectionTimer()
     {
-        Debug.Log("In coroutine");
         yield return new WaitForSeconds(collectionTimer);
-        GetComponent<StateMachine>().ChangeState(new GoToBaseState());
+        hasBerry = true;
+        GetComponent<StateMachine>().ChangeState(new GoToBaseState(VillagePointRef));
+    }
+
+    public IEnumerator DepositTimer()
+    {
+        yield return new WaitForSeconds(collectionTimer);
+        hasBerry = false;
+        GetComponent<StateMachine>().ChangeState(new ScavengeState());
     }
 
     public void OnTriggerStay(Collider other)

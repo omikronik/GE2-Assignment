@@ -37,7 +37,8 @@ public class JitterWander : SteeringBehaviour
         worldTarget = transform.TransformPoint(localTarget);
         worldTarget.y = 0;
 
-        return worldTarget - transform.position;
+        var temp = worldTarget - transform.position;
+        return new Vector3(temp.x, 0, temp.z);
     }
 
     // Start is called before the first frame update
